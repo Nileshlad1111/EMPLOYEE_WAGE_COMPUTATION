@@ -16,6 +16,7 @@ else
 	echo "Employee Absent"
 fi
 
+
 #TO FUNCTION CALCULATE EMPLOYEE WAGE
 function calculateDailyEmployeeWage(){
 	read -p "Assume Wage per hour is :" isWagePerHour "rupees"
@@ -24,3 +25,4 @@ function calculateDailyEmployeeWage(){
 	echo "To calculate daily employee wage :" $calculateEmployeeWage "rupees"
 }
 calculateDailyEmployeeWage
+
