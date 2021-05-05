@@ -1,7 +1,5 @@
 #!/bin/bash -x
 
-echo "------------------------- Welcome To Employee Wage Compution ------------------------"
-
 #INITIAL VALUE TO ASSING PRESENT
 isPresent=1
 
@@ -12,15 +10,14 @@ randomNumber=$((RANDOM%2))
 if [ $randomNumber -eq 	$isPresent ]
 then
 	echo "Employee Present"
-else
-	echo "Employee Absent"
-fi
-
-#TO FUNCTION CALCULATE EMPLOYEE WAGE
-function calculateDailyEmployeeWage(){
+  	#TO FUNCTION PART TIME EMPLOYEE AND  WAGE
+	function partTimeEmployeeAndWage(){
 	read -p "Assume Wage per hour is :" isWagePerHour "rupees"
-	read -p "To full day hours is :" isFullDayHour
-	calculateEmployeeWage=$(( $isWagePerHour * $isFullDayHour ))
-	echo "To calculate daily employee wage :" $calculateEmployeeWage "rupees"
+	read -p "To part time hour is :" isFullDayHour
+	calculatePartTimeEmployeeWage=$(( $isWagePerHour * $isFullDayHour ))
+	echo "To calculate part time employee and wage :" $calculatePartTimeEmployeeWage "rupees"
 }
-calculateDailyEmployeeWage
+partTimeEmployeeAndWage
+else
+   echo "Employee Absent"
+ fi
